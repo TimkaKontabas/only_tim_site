@@ -1,0 +1,17 @@
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;;
+    padding: 20px;
+}
+.contacts #YMapsID {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    margin-left: 40px;
+}
+.contacts p {
+    text-align: justify;
+    width: 80%;
+    word-wrap: wrap;
+}

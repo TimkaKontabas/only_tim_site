@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+
+	<link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/contacts.css">
+	<title>Курсовая</title>
+</head>
+<body>
+	<div class="page">
+		<header class="header">
+			<div class="logo">
+				<a href="/">
+					<img src="../static/img/logo.png" alt="">
+				</a>
+			</div>
+			<div class="title">
+				<h1>Сеть почтовых отделений мистера Тима</h1>
+				<nav class="menu">
+					<a href="/about"><li>О компании</li></a>
+					<a href="/news"><li>Новости</li></a>
+					<a href="/partners"><li>Партнеры</li></a>
+					<a href="/authors"><li>Об авторах</li></a>
+					<a href="/table"><li>Таблицы</li></a>
+				</nav>
+			</div>
+			<div class="right-space">
+				<input id="print" type="button" value="Печатать" onclick="window.print();"/>
+				<div id="google_translate_element"></div>
+				<div class="search">
+
+					<input type="text"> <button>Поиск</button>
+				</div>
+			</div>
+				
+		</header>
+		
+		<div class="contacts">
+            <div class="text-data">
+                <p>Телефон: 8-800-555-35-35</p>
+                <p>Электронная почта: pochtatima@gmail.com</p>
+                <p>пн—сб	09:00—18:00 <br>
+                    вс	выходной</p>
+                <p>Прием заявок: круглосуточно</p>
+                <p>Адрес: обл Челябинская, г Троицк, ул им. Ю.А. Гагарина, дом 38</p>
+            </div>
+            <div id="YMapsID"></div>
+        </div>
+			
+
+		<footer class="footer">
+    Разработчик сайта Конторваев Тимур Серикович<br>
+    Троицк 2024 г. <br>
+</footer>
+	</div>
+    
+    <script src="../static/js/YaMaps.js"></script>
+
+	<script type="text/javascript" src="../static/js/googleTranslateElement.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

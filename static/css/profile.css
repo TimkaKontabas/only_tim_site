@@ -1,0 +1,45 @@
+.profile-main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+.border-right {
+    border-right: 2px solid rgba(0, 0, 0, 0.2)
+}
+.avatar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+.avatar img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+.settings {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+.settings-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.settings-search {
+    padding-top: 20px;
+}
+.info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}

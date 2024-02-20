@@ -25,7 +25,13 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     border-radius: 30px;
+}
+
+#loginForm h1 {
+    margin-bottom: 20px;
 }
 
 .opacity-input {
@@ -33,12 +39,19 @@
     border: none;
     border: 2px solid rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+	transition: 1s ease;
+}
+.opacity-input:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-left: 7%;
+    padding-right: 7%;
 }
 
 #login-input {
     font-size: 18px;
     margin-bottom: 20px;
 }
+
 
 #password-input {
     font-size: 18px;

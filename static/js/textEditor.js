@@ -82,7 +82,7 @@ addImageButton.addEventListener('click', () => {
     // document.execCommand('insertImage', false, image);
     addImage(image);
 });
-
+// Я люблю Офелию
 function addImage(image) {
     let dopDiv = document.createElement('div');
     let div = document.createElement('div');

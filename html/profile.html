@@ -8,11 +8,12 @@
 
 	<link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/css/profile.css">
+    <link rel="stylesheet" href="../static/css/swithCheckbox.css">
 	<title>Курсовая</title>
 </head>
 <body>
 	<div class="page">
-        <header class="header"><div class="logo"><a href="/"><img src="../static/img/logo.png" alt=""></a></div><div class="title"><h1>Сеть почтовых отделений мистера Тима</h1><nav class="menu"><a href="/about"><li>О компании</li></a><a href="/news"><li>Новости</li></a><a href="/partners"><li>Партнеры</li></a><a href="/authors"><li>Об авторах</li></a><a href="/table"><li>Таблицы</li></a></nav></div><div class="right-space"><input id="print" type="button" value="Печатать" onclick="window.print();"><div id="google_translate_element"></div><div class="search"><input type="text"> <button>Поиск</button></div></div></header>
+        <header class="header"><div class="logo"><a href="index.html"><img src="../static/img/logo.png" alt=""></a></div><div class="title"><h1>Сеть почтовых отделений мистера Тима</h1><nav class="menu"><a href="about.html"><li>О компании</li></a><a href="/news"><li>Новости</li></a><a href="/partners"><li>Партнеры</li></a><a href="/authors"><li>Об авторах</li></a><a href="/table"><li>Таблицы</li></a></nav></div><div class="right-space"><input id="print" type="button" value="Печатать" onclick="window.print();"><div id="google_translate_element"></div><div class="search"><input type="text"> <button>Поиск</button></div></div></header>
 		
 		<div class="profile-main">
             <div class="avatar border-right">
@@ -24,16 +25,117 @@
                 </p>
             </div>
             <div class="settings border-right">
-                <div class="settings-head">
+                <div class="settings-head border-bottom">
                     <h3>Настройки профиля</h3>
                     <div class="settings-search">
-                        <input type="text" placeholder="Поиск">
-                        <button>Поиск</button>
+                        <input id="settings-search" type="text" placeholder="Поиск">
+                    </div>
+                </div>
+                <div class="settings-buttons">
+                    <div class="settings-element" onclick="setNomerSettings(0)">
+                        <p class="element-title">Общие</p>
+                        <p class="spisok">Язык интерфейса, Регион</p>
+                    </div>
+                    <div class="settings-element" onclick="setNomerSettings(1)">
+                        <p class="element-title">Уведомления</p>
+                        <p class="spisok">Email уведомления, Включить/Отключить уведомления</p>
+                    </div>
+                    <div class="settings-element" onclick="setNomerSettings(2)">
+                        <p class="element-title">Приватность</p>
+                        <p class="spisok">Обрабатывать личные данные, Последняя активность</p>
+                    </div>
+                    <div class="settings-element" onclick="setNomerSettings(3)">
+                        <p class="element-title">Доставка</p>
+                        <p class="spisok">Адрес доставки по умолчанию, Предпочтительные почтовые отделения</p>
+                    </div>
+                    <div class="settings-element" onclick="setNomerSettings(4)">
+                        <p class="element-title">Личные данные</p>
+                        <p class="spisok">Дата рождения, Никнейм, Телефон</p>
+                    </div>
+                    <div class="settings-element" onclick="setNomerSettings(5)">
+                        <p class="element-title">Аккаунт</p>
+                        <p class="spisok">Логин, Пароль</p>
+                    </div>
+                    <div class="settings-element" onclick="setNomerSettings(6)">
+                        <p class="element-title">Профиль</p>
+                        <p class="spisok">Город проживания, О себе</p>
+                    </div>
+                    <div class="hide" id="settings-empty-description">
+                        <p class="element-title">Ничего не найдено</p>
+                        <p class="spisok">К сожалению ваш запрос не дал никаких результатов</p>
                     </div>
                 </div>
             </div>
             <div class="info">
-
+                <div class="settings-info-element element-1">
+                    <h3 class="settings-info-title">Общие</h3>
+                    <p class="setting-description">Язык интерфейса</p>
+                    <select class="goog-te-combo" aria-label="Язык виджета Google Переводчика"><option value="">Выбрать язык</option><option value="az">азербайджанский</option><option value="ay">аймара</option><option value="sq">албанский</option><option value="am">амхарский</option><option value="en">английский</option><option value="ar">арабский</option><option value="hy">армянский</option><option value="as">ассамский</option><option value="af">африкаанс</option><option value="bm">бамбара</option><option value="eu">баскский</option><option value="be">белорусский</option><option value="bn">бенгальский</option><option value="my">бирманский</option><option value="bg">болгарский</option><option value="bs">боснийский</option><option value="bho">бходжпури</option><option value="cy">валлийский</option><option value="hu">венгерский</option><option value="vi">вьетнамский</option><option value="haw">гавайский</option><option value="gl">галисийский</option><option value="el">греческий</option><option value="ka">грузинский</option><option value="gn">гуарани</option><option value="gu">гуджарати</option><option value="da">датский</option><option value="doi">догри</option><option value="zu">зулу</option><option value="iw">иврит</option><option value="ig">игбо</option><option value="yi">идиш</option><option value="ilo">илоканский</option><option value="id">индонезийский</option><option value="ga">ирландский</option><option value="is">исландский</option><option value="es">испанский</option><option value="it">итальянский</option><option value="yo">йоруба</option><option value="kk">казахский</option><option value="kn">каннада</option><option value="ca">каталанский</option><option value="qu">кечуа</option><option value="ky">киргизский</option><option value="zh-TW">китайский (традиционный)</option><option value="zh-CN">китайский (упрощенный)</option><option value="gom">конкани</option><option value="ko">корейский</option><option value="co">корсиканский</option><option value="xh">коса</option><option value="ht">креольский (гаити)</option><option value="kri">крио</option><option value="ku">курдский (курманджи)</option><option value="ckb">курдский (сорани)</option><option value="km">кхмерский</option><option value="lo">лаосский</option><option value="la">латинский</option><option value="lv">латышский</option><option value="ln">лингала</option><option value="lt">литовский</option><option value="lg">луганда</option><option value="lb">люксембургский</option><option value="mai">майтхили</option><option value="mk">македонский</option><option value="mg">малагасийский</option><option value="ms">малайский</option><option value="ml">малаялам</option><option value="dv">мальдивский</option><option value="mt">мальтийский</option><option value="mi">маори</option><option value="mr">маратхи</option><option value="mni-Mtei">мейтейлон (манипури)</option><option value="lus">мизо</option><option value="mn">монгольский</option><option value="de">немецкий</option><option value="ne">непальский</option><option value="nl">нидерландский</option><option value="no">норвежский</option><option value="or">ория</option><option value="om">оромо</option><option value="pa">панджаби</option><option value="fa">персидский</option><option value="pl">польский</option><option value="pt">португальский</option><option value="ps">пушту</option><option value="rw">руанда</option><option value="ro">румынский</option><option value="sm">самоанский</option><option value="sa">санскрит</option><option value="ceb">себуанский</option><option value="nso">сепеди</option><option value="sr">сербский</option><option value="st">сесото</option><option value="si">сингальский</option><option value="sd">синдхи</option><option value="sk">словацкий</option><option value="sl">словенский</option><option value="so">сомалийский</option><option value="sw">суахили</option><option value="su">сунданский</option><option value="tg">таджикский</option><option value="th">тайский</option><option value="ta">тамильский</option><option value="tt">татарский</option><option value="te">телугу</option><option value="ti">тигринья</option><option value="ts">тсонга</option><option value="tr">турецкий</option><option value="tk">туркменский</option><option value="uz">узбекский</option><option value="ug">уйгурский</option><option value="uk">украинский</option><option value="ur">урду</option><option value="tl">филиппинский</option><option value="fi">финский</option><option value="fr">французский</option><option value="fy">фризский</option><option value="ha">хауса</option><option value="hi">хинди</option><option value="hmn">хмонг</option><option value="hr">хорватский</option><option value="ak">чви</option><option value="ny">чева</option><option value="cs">чешский</option><option value="sv">шведский</option><option value="sn">шона</option><option value="gd">шотландский (гэльский)</option><option value="ee">эве</option><option value="eo">эсперанто</option><option value="et">эстонский</option><option value="jw">яванский</option><option value="ja">японский</option></select>
+                    <p class="setting-description">Регион</p>
+                    <input type="text" name="region" id="region">
+                </div>
+                <div class="settings-info-element element-2">
+                    <h3 class="settings-info-title">Уведомления</h3>
+                    <p class="setting-description">Email уведомления</p>
+                    <div class="settings-row">
+                        <input type="email" name="email" id="email">
+                        
+                        <div class="checkbox-with-label">
+                            <input class="switch" type="checkbox" name="isEmailNotification" id="isEmailNotification">
+                            <label for="email">Включить уведомления</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="settings-info-element element-3">
+                    <h3 class="settings-info-title">Приватность</h3>
+                    <p class="setting-description">Обрабатывать личные данные</p>
+                    <div class="settings-row">
+                        <div class="checkbox-with-label">
+                            <input class="switch" type="checkbox" name="isPersonalDataProcessing" id="isPersonalDataProcessing">
+                            <label for="isPersonalDataProcessing">Включить</label>
+                        </div>
+                    </div>
+                    <p class="setting-description">Последняя активность</p>
+                    <div class="settings-row">
+                        <div class="checkbox-with-label">
+                            <input class="switch" type="checkbox" name="isLastActivity" id="isLastActivity">
+                            <label for="isLastActivity">Включить</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="settings-info-element element-4">
+                    <h3 class="settings-info-title">Доставка</h3>
+                    <p class="setting-description">Адрес доставки по умолчанию</p>
+                    <input type="text" name="defaultAddress" id="defaultAddress">
+                    <p class="setting-description">Предпочтительные почтовые отделения</p>
+                    <input type="text" name="preferredPostOffice" id="preferredPostOffice">
+                </div>
+                <div class="settings-info-element element-5">
+                    <h3 class="settings-info-title">Личные данные</h3>
+                    <p class="setting-description">Дата рождения</p>
+                    <input type="date" name="birthday" id="birthday">
+                    <p class="setting-description">Никнейм</p>
+                    <input type="text" name="nickname" id="nickname">
+                    <p class="setting-description">Телефон</p>
+                    <input type="number" name="phone" id="phone">
+                </div>
+                <div class="settings-info-element element-6">
+                    <h3 class="settings-info-title">Аккаунт</h3>
+                    <p class="setting-description">Логин</p>
+                    <input type="text" name="login" id="login">
+                    <p class="setting-description">Пароль</p>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="settings-info-element element-7">
+                    <h3 class="settings-info-title">Профиль</h3>
+                    <p class="setting-description">Город проживания</p>
+                    <input type="text" name="city" id="city">
+                    <p class="setting-description">О себе</p>
+                    <input type="text" name="about" id="about">
+                </div>
+                <div class="footer-settings">
+                    <input id="saveSettingsButton" type="button" value="Сохранить">
+                </div>
             </div>
         </div>
 			

@@ -1,0 +1,28 @@
+/* 
+    switch checkbox 
+    Взято с сайта: https://radioprog.ru/post/998
+*/
+input.switch {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    height: 2em;
+    width: 4em;
+    border-radius: 2em;
+    box-shadow: inset -2em 0px 0px 0px rgba(192, 192, 192, 1);
+    background-color: white;
+    border: 1px solid rgba(192, 192, 192, 1);
+    outline: none;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+input.switch:checked {
+    box-shadow: inset 2em 0px 0px 0px rgba(22, 219, 88, 0.5);
+    border: 1px solid rgb(58, 194, 4);
+}
+
+input.switch:focus {
+    outline-width: 0;
+}

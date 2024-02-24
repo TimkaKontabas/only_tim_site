@@ -11,6 +11,9 @@
 .border-right {
     border-right: 2px solid rgba(0, 0, 0, 0.2)
 }
+.border-bottom {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2)
+}
 .avatar {
     flex: 1;
     display: flex;
@@ -34,12 +37,80 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .settings-search {
     padding-top: 20px;
+}
+.settings-buttons {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+.settings-element, #settings-empty-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5px;
+    transition:cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.5s;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.settings-element:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+.element-title {
+    font-size: medium;
+    font-weight: bold;
+}
+.spisok {
+    font-size: small;
+}
+.settings-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.checkbox-with-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.settings-info-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5px;
+    display: none;
 }
 .info {
     flex: 2;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.info input {
+    height: 20px;
+}
+.footer-settings {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+.settings-info-title {
+    text-align: center;
+}
+#saveSettingsButton {
+    font-size: medium;
+    text-align: center;
+    align-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.2);
 }

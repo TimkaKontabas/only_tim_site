@@ -34,10 +34,13 @@
     resize: none;
     width: 90%;
 }
-
-
-
-
+/* .star-score {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 2px solid black;
+    width: 80%;
+} */
 
 .feedbacks {
     display: flex;

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+
+	<link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/mailDelivery.css">
+	<title>О компании</title>
+</head>
+<body>
+	<div class="page">
+        <header class="header"><div class="logo"><a href="/"><img src="../static/img/logo.png" alt=""></a></div><div class="title"><h1>Сеть почтовых отделений мистера Тима</h1><nav class="menu"><a href="about.html"><li>О компании</li></a><a href="/news"><li>Новости</li></a><a href="/partners"><li>Партнеры</li></a><a href="/authors"><li>Об авторах</li></a><a href="/table"><li>Таблицы</li></a></nav></div><div class="right-space"><input id="print" type="button" value="Печатать" onclick="window.print();"><div id="google_translate_element"></div><div class="search"><input type="text"> <button>Поиск</button></div></div></header>
+		
+		<h2 class="titleMailDelivery">Доставка ваших посылок</h2>
+        <div class="mailDelivery">
+            
+            <div class="parcels">
+                <h2 class="titleParcels">Посылки: 3</h2>
+                <div class="parcels-info">
+                    <div class="parcels-info-element current" onclick="setParcelInfo(0)">
+                        <h3>Посылка No3</h3>
+                        <p class="parcels-info-element-date">12.02.2024</p>
+                        <p class="parcels-info-element-status">В пути в пункт назначения</p>
+                    </div>
+                    <div class="parcels-info-element completed" onclick="setParcelInfo(1)">
+                        <h3>Посылка No2</h3>
+                        <p class="parcels-info-element-date">05.09.2023</p>
+                        <p class="parcels-info-element-status">Доставлено</p>
+                    </div>
+                    <div class="parcels-info-element completed" onclick="setParcelInfo(2)">
+                        <h3>Посылка No1</h3>
+                        <p class="parcels-info-element-date">21.04.2023</p>
+                        <p class="parcels-info-element-status">Доставлено</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mailDeliveryInfo">
+                <div class="statuses hide" id="parcel-3">
+                    <div class="mailDeliveryInfoElement decorated completed">
+                        <p class="mailDeliveryInfoElementStatus">Обработка</p>
+                        <p class="mailDeliveryInfoElementdate">12.02.2024</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement sentForAssembly completed">
+                        <p class="mailDeliveryInfoElementStatus">Регистрация</p>
+                        <p class="mailDeliveryInfoElementdate">13.02.2024</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement assembled completed">
+                        <p class="mailDeliveryInfoElementStatus">Проверка</p>
+                        <p class="mailDeliveryInfoElementdate">15.02.2024</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement sorted completed">
+                        <p class="mailDeliveryInfoElementStatus">Сортировка</p>
+                        <p class="mailDeliveryInfoElementdate">19.02.2024</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement readyToSend completed">
+                        <p class="mailDeliveryInfoElementStatus">Готово к отправке</p>
+                        <p class="mailDeliveryInfoElementdate">24.02.2024</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement toPath current">
+                        <p class="mailDeliveryInfoElementStatus">В пути в пункт назначения</p>
+                        <p class="mailDeliveryInfoElementdate">25.02.2024</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement delivered">
+                        <p class="mailDeliveryInfoElementStatus">Доставлено</p>
+                        <p class="mailDeliveryInfoElementdate">Ожидается с 29.02.2024</p>
+                    </div>
+                </div>
+
+                <div class="statuses hide" id="parcel-2">
+                    <div class="mailDeliveryInfoElement decorated completed">
+                        <p class="mailDeliveryInfoElementStatus">Обработка</p>
+                        <p class="mailDeliveryInfoElementdate">05.09.2023</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement sentForAssembly completed">
+                        <p class="mailDeliveryInfoElementStatus">Регистрация</p>
+                        <p class="mailDeliveryInfoElementdate">06.09.2023</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement assembled completed">
+                        <p class="mailDeliveryInfoElementStatus">Проверка</p>
+                        <p class="mailDeliveryInfoElementdate">08.09.2023</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement sorted completed">
+                        <p class="mailDeliveryInfoElementStatus">Сортировка</p>
+                        <p class="mailDeliveryInfoElementdate">12.09.2023</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement readyToSend completed">
+                        <p class="mailDeliveryInfoElementStatus">Готово к отправке</p>
+                        <p class="mailDeliveryInfoElementdate">17.09.2023</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement toPath completed">
+                        <p class="mailDeliveryInfoElementStatus">В пути в пункт назначения</p>
+                        <p class="mailDeliveryInfoElementdate">18.09.2023</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement delivered completed">
+                        <p class="mailDeliveryInfoElementStatus">Доставлено</p>
+                        <p class="mailDeliveryInfoElementdate">22.09.2023</p>
+                    </div>
+                </div>
+
+                <div class="statuses hide" id="parcel-1">
+                    <div class="mailDeliveryInfoElement decorated completed">
+                        <p class="mailDeliveryInfoElementStatus">Обработка</p>
+                        <p class="mailDeliveryInfoElementdate">21.04.2023</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement sentForAssembly completed">
+                        <p class="mailDeliveryInfoElementStatus">Регистрация</p>
+                        <p class="mailDeliveryInfoElementdate">22.04.2023</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement assembled completed">
+                        <p class="mailDeliveryInfoElementStatus">Проверка</p>
+                        <p class="mailDeliveryInfoElementdate">24.04.2023</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement sorted completed">
+                        <p class="mailDeliveryInfoElementStatus">Сортировка</p>
+                        <p class="mailDeliveryInfoElementdate">28.04.2023</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement readyToSend completed">
+                        <p class="mailDeliveryInfoElementStatus">Готово к отправке</p>
+                        <p class="mailDeliveryInfoElementdate">03.05.2023</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement toPath completed">
+                        <p class="mailDeliveryInfoElementStatus">В пути в пункт назначения</p>
+                        <p class="mailDeliveryInfoElementdate">04.05.2023</p>
+                    </div>
+                    <div class="mailDeliveryInfoElement delivered completed">
+                        <p class="mailDeliveryInfoElementStatus">Доставлено</p>
+                        <p class="mailDeliveryInfoElementdate">08.05.2023</p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>  
+
+		<footer class="footer">Разработчик сайта Конторваев Тимур Серикович<br>Троицк 2024 г.<br></footer>
+	</div>
+    
+    <script src="../static/js/mailDelivery.js"></script>
+
+	<script type="text/javascript" src="../static/js/googleTranslateElement.js"></script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

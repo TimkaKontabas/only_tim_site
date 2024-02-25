@@ -29,6 +29,20 @@ body {
 	margin: 0;
 }
 
+.text-about {
+	padding: 10px;
+}
+.text-about .img {
+	display: flex;
+	justify-content: center;
+}
+.text-about h2 {
+	padding-left: 35px;
+}
+.text-about p {
+	text-align: justify;
+}
+
 .header {
 	display: flex;
 	justify-content: space-between;

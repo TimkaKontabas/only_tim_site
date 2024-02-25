@@ -1,3 +1,17 @@
+@font-face {
+	font-family: "Raleway";
+	src:
+	  url("../font/Raleway-VariableFont_wght.ttf") format("truetype");
+  }
+@font-face {
+	font-family: "Playfair Display Variable";
+	src: url("../font/PlayfairDisplay-VariableFont_wght.ttf");
+}
+@font-face {
+	font-family: "Playfair Display Italic";
+	src: url("../font/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+}
+
 /* .page {
 	background-image: url(../img/background.jpg);
 	background-repeat: no-repeat;
@@ -11,7 +25,7 @@
 
 body {
 	background: linear-gradient(to right, #b8c08c, #989e76);
-	font-family: sans-serif;
+	font-family: 'Playfair Display Italic';
 	margin: 0;
 }
 

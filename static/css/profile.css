@@ -48,7 +48,14 @@
     flex-direction: column;
     /* justify-content: space-between; */
 }
-.settings-element, #settings-empty-description {
+#settings-empty-description {
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5px;
+    transition:cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.5s;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.settings-element {
     display: flex;
     flex-direction: column;
     justify-content: space-around;

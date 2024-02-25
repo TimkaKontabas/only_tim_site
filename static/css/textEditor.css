@@ -1,4 +1,4 @@
-#mainTextEditor {
+#TextEditorSarbTextArea {
     border: 1px solid black;
     padding: 5px;
     font-size: 18px;
@@ -7,8 +7,26 @@
     position: relative;
     margin-top: 10px;
 }
-#mainTextEditor:focus-visible {
+#TextEditorSarbTextArea:focus-visible {
     outline: none;
+}
+#TextEditorSarbToolPanel {
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+.TextEditorSarbToolButton {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(0,0, 0, 0);
 }
 /* img {
     width: 200px;
